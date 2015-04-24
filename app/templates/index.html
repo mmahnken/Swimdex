@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% block body %}
+    <div class="container col-md-8 col-md-offset-2">
+
+        <p class="lead">Get swim workouts tailored to you.</p>
+
+        <form role="form" action="/workout">
+            <div class="row">
+              <div class="col-lg-6 col-lg-offset-3">
+                <div class="form-group">
+                    <label for="length-time">How long?</label>
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-time" aria-hidden="true"></span></span>
+                        <input type="number" class="form-control" placeholder="45" name="total_time" value="45" step="5">
+                            <div class="input-group-btn">
+                                <!-- Button and dropdown menu -->
+                                <button type="button" class="btn btn-default">Minutes</button>
+
+                            </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="length-distance">How much?</label>
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-road" aria-hidden="true"></span></span>
+                        <input type="number" class="form-control" placeholder="100" name="total_distance" step="50" value="100">
+                        <div class="input-group-btn">
+                            <!-- Button and dropdown menu -->
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Yards <span class="caret"></span></button>
+                                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                  <li><a href="#">Yards</a></li>
+                                  <li><a href="#">Meters</a></li>
+                                  <li class="divider"></li>
+                                  <li><a href="#">About yards vs. meters</a></li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>                 <!-- </row> -->
+            <div class="form-group">
+                
+                <div class="row">
+                    <div class="col-lg-6 col-lg-offset-3">
+                      <label for="base-interval">I can swim </label>
+                        <div class="input-group input-group-lg">
+                            <span class="input-group-addon">Distance</span>
+                            <input type="number" class="form-control" placeholder="100" name="distance" step="5" value="100">
+                            <div class="input-group-btn">
+                                <!-- Button and dropdown menu -->
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Yards <span class="caret"></span></button>
+                                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                      <li><a href="#">Yards</a></li>
+                                      <li><a href="#">Meters</a></li>
+                                      <li class="divider"></li>
+                                      <li><a href="#">About yards vs. meters</a></li>
+                                    </ul>
+                            </div>
+                        </div>
+                    </div> 
+
+
+                    <div class="col-lg-6 col-lg-offset-3">
+                        <label for="base-interval">in </label>
+                        <div class="input-group input-group-lg">
+                            <span class="input-group-addon">Time</span>
+                            <input type="text" class="form-control" placeholder="1:30" name="base">
+                            <div class="input-group-btn">
+                                <!-- Button and dropdown menu -->
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Seconds <span class="caret"></span></button>
+                                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                      <li><a href="#">Seconds</a></li>
+                                      <li><a href="#">Minutes</a></li>
+                                    </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div> <!-- end form-group div -->    
+
+            </div>
+            <div class="row">
+              
+                <button type="submit" class="btn btn-default btn-block">Go!</button>
+              
+            </div>
+        </form>
+    </div> <!-- end container -->
+{% endblock %}
